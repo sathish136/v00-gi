@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import HeroSlider from "@/components/hero-slider"
+import Image from "next/image"
+import CountingNumbers from "@/components/counting-numbers"
 import {
   ArrowRight,
   Droplets,
@@ -13,9 +15,14 @@ import {
   CheckCircle,
   Award,
   Globe,
-  Users,
   Star,
   TrendingUp,
+  Gauge,
+  Minimize,
+  ArrowUpCircle,
+  DollarSign,
+  Cpu,
+  Monitor,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -36,6 +43,80 @@ export default function HomePage() {
               customers achieve better resource productivity and bottom lines while maintaining a better environment.
               Our comprehensive water treatment solutions ensure compliance, sustainability, and operational excellence.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation at the Core Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text and Technologies List */}
+            <div>
+              <Badge className="mb-4 bg-orange-500 text-white">Patented Technologies</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Innovation at the Core of Everything We Do
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Our proprietary technologies represent years of research and development, delivering superior
+                performance and efficiency in water treatment with proven results across industries.
+              </p>
+              <div className="space-y-4 mb-8">
+                <Card className="p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Recycle className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Rwolute</h3>
+                    <p className="text-sm text-gray-600">Revolutionary water treatment technology</p>
+                  </div>
+                </Card>
+                <Card className="p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Droplets className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">BrineX</h3>
+                    <p className="text-sm text-gray-600">Advanced brine management system</p>
+                  </div>
+                </Card>
+                <Card className="p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">CaRe</h3>
+                    <p className="text-sm text-gray-600">Calcium removal technology</p>
+                  </div>
+                </Card>
+                <Card className="p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Gauge className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Aquanzer</h3>
+                    <p className="text-sm text-gray-600">Smart water analysis system</p>
+                  </div>
+                </Card>
+              </div>
+              <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Link href="/technologies">
+                  Explore Technologies
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Right Column: Placeholder Image Card */}
+            <Card className="p-8 flex items-center justify-center h-[500px] border-2 border-gray-200 shadow-lg">
+              <Image
+                src="/placeholder.svg?height=400&width=500"
+                alt="Innovation in Water Treatment"
+                width={500}
+                height={400}
+                className="rounded-lg object-cover"
+              />
+            </Card>
           </div>
         </div>
       </section>
@@ -337,7 +418,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-wide">
@@ -347,42 +428,89 @@ export default function HomePage() {
               Our unique combination of expertise, technology, and commitment sets us apart
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-orange-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 uppercase tracking-wide">Innovation</h3>
-              <p className="text-gray-600">
-                Cutting-edge R&D and patented technologies that deliver superior performance and efficiency.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            {/* Left Column: Video Embed */}
+            <div className="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/ztOGRRVuyO4?autoplay=0&modestbranding=1&rel=0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 uppercase tracking-wide">Expertise</h3>
-              <p className="text-gray-600">
-                Highly skilled team of engineers and technicians with decades of experience in water treatment.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="h-8 w-8 text-green-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 uppercase tracking-wide">Global Reach</h3>
-              <p className="text-gray-600">
-                International presence with local support and understanding of regional regulatory requirements.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-purple-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 uppercase tracking-wide">Quality</h3>
-              <p className="text-gray-600">
-                ISO certified processes and rigorous quality control ensuring reliable and sustainable solutions.
-              </p>
+
+            {/* Right Column: Benefits Grid */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-blue-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Minimize className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">
+                    LESS FOOTPRINT
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Minimum as 0.5 sq.m/cubic meter, optimizing space and efficiency.
+                  </p>
+                </div>
+              </Card>
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-orange-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <ArrowUpCircle className="h-5 w-5 text-orange-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">
+                    HIGHER RECOVERY
+                  </h3>
+                  <p className="text-xs text-gray-600">More than 97% Recovery with advanced Membrane Technology.</p>
+                </div>
+              </Card>
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-green-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <DollarSign className="h-5 w-5 text-green-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">
+                    AFFORDABLE CAPEX & OPEX
+                  </h3>
+                  <p className="text-xs text-gray-600">Lowest Power consumption - 2.5 kW/cubic meter up to RO.</p>
+                </div>
+              </Card>
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-purple-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Cpu className="h-5 w-5 text-purple-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">AUTOMATION</h3>
+                  <p className="text-xs text-gray-600">
+                    PLC & SCADA Operated Plant with Minimum Manpower requirements.
+                  </p>
+                </div>
+              </Card>
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-red-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Factory className="h-5 w-5 text-red-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">
+                    EQUIPMENT MANUFACTURERS
+                  </h3>
+                  <p className="text-xs text-gray-600">World-Class in-house Manufacturing Facility ensuring quality.</p>
+                </div>
+              </Card>
+              <Card className="p-3 border-0 shadow-lg bg-white hover:bg-teal-50 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] flex flex-col justify-between">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Monitor className="h-5 w-5 text-teal-600" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-0.5 uppercase tracking-wide text-gray-900">
+                    ADVANCED DATA MONITORING
+                  </h3>
+                  <p className="text-xs text-gray-600">Cloud Storage and Mobile App Access for Plant Operating Data.</p>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -399,19 +527,19 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+              <CountingNumbers target={500} suffix="+" />
               <div className="text-orange-100 uppercase tracking-wide">Projects Completed</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">20+</div>
+              <CountingNumbers target={20} suffix="+" />
               <div className="text-orange-100 uppercase tracking-wide">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
+              <CountingNumbers target={15} suffix="+" />
               <div className="text-orange-100 uppercase tracking-wide">Countries Served</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
+              <CountingNumbers target={98} suffix="%" />
               <div className="text-orange-100 uppercase tracking-wide">Client Satisfaction</div>
             </div>
           </div>
